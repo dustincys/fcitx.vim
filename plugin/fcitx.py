@@ -73,6 +73,7 @@ def fcitx2zh():
   if vim.eval('exists("b:inputtoggle")') == '1':
     if vim.eval('b:inputtoggle') == '1':
       Fcitx.activate()
+      os.system("FvwmCommand 'PointerWindow silent WarpToWindow 1 1'")
       vim.command('let b:inputtoggle = 0')
   else:
     vim.command('let b:inputtoggle = 0')
